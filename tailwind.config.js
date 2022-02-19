@@ -11,8 +11,19 @@ module.exports = {
       },
     },
   },
+
   variants: {
     extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
+  safelist: [
+    {
+      pattern: /bg-/,
+      variants: ["lg", "hover", "focus", "lg:hover"],
+    },
+    {
+      pattern: /text-/,
+      variants: ["lg", "hover", "focus", "lg:hover"],
+    },
+  ],
 };
